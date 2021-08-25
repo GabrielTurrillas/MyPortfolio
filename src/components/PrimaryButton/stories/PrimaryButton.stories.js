@@ -1,6 +1,7 @@
 import PrimaryButton from "../PrimaryButton";
 import StoryRouter from 'storybook-react-router'
 import {
+  defaultData,
   heroData,
   worksPageData,
   worksCodeData,
@@ -17,18 +18,23 @@ export default {
 
 const Template = (args) => <PrimaryButton {...args} />
 
-export const heroButton = Template.bind({})
-export const worksPageButton = Template.bind({})
-export const worksCodeButton = Template.bind({})
+export const Default = Template.bind({})
+export const HeroButton = Template.bind({})
+export const WorksPageButton = Template.bind({})
+export const WorksCodeButton = Template.bind({})
 
-heroButton.args = {
+Default.args = {
+  ...defaultData
+}
+
+HeroButton.args = {
   ...heroData
 };
 
-worksPageButton.args = {
+WorksPageButton.args = {
   ...worksPageData
 };
 
-worksCodeButton.args = {
+WorksCodeButton.args = {
   ...worksCodeData
 }

@@ -1,23 +1,27 @@
+export const defaultData = {
+  english: false,
+  engButtonText: 'PrimaryButton',
+  buttonText: 'PrimaryButton',
+  path: '#!',
+}
+
 export const heroData = {
   english: false,
   engButtonText: 'Contact',
   buttonText: 'Contacto',
-  contactUrl: '#!',
-  big: false,
+  path: '#!',
 }
 
 export const worksPageData = {
   english: false,
   engButtonText: 'Go to Page',
   buttonText: 'Pagina',
-  contactUrl: '#!',
-  big: false,
+  path: '#!',
 }
 
 export const worksCodeData = {
   english: false,
   engButtonText: 'Go to Code',
   buttonText: 'Codigo',
-  contactUrl: '#!',
-  big: false,
+  path: '#!',
 }

@@ -85,6 +85,7 @@ export const device = {
   mobileS: `(min-width: ${widthSizeSB.mobileS})`,
   mobileM: `(min-width: ${widthSizeSB.mobileM})`,
   mobileL: `(min-width: ${widthSizeSB.mobileL})`,
+  //mobileToTablet: `(min-width: 580px )`,
   tablet: `(min-width: ${widthSizeSB.tablet})`,
   laptop: `(min-width: ${widthSizeSB.laptop})`,
   laptopL: `(min-width: ${widthSizeSB.laptopL})`,

@@ -1,10 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { colors, GlobalStyles, device } from '../../styles';
+import React from 'react'
+import styled from 'styled-components'
+import { GlobalStyles, colors, device } from '../../styles'
+import { Link } from 'react-router-dom'
 
-
-const PrimaryButton = ({ english, engButtonText, buttonText, path, typeOfButton }) => {
+const SecondaryButton = ({ english, engButtonText, buttonText, path, typeOfButton }) => {
   const makeContainer = (typeOfButton = 'L') => {
     if (typeOfButton === 'A') {
       return (
@@ -30,21 +29,21 @@ const PrimaryButton = ({ english, engButtonText, buttonText, path, typeOfButton 
   )
 }
 
-export default PrimaryButton
+export default SecondaryButton;
 
 const Properties = `
-  text-decoration:none;
-  background:${colors.primary};
+  padding: 0.7rem 0.9rem;
+  border:2px solid ${colors.primary}; 
   width:fit-content;
   height:fit-content;
-  padding: 0.8rem 1rem;
   border-radius:50px;
-  color:black;
+  color: ${colors.primary};
   font-size:0.7rem;
-  font-weight:bold;
+  font-weight: bold;
+  text-decoration:none;
   transition: .1s;
   &:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
   }
   &:active {
     transform: scale(0.9);
@@ -62,5 +61,3 @@ const LinkContainer = styled(Link)`
 const AnchorContainer = styled.a`
   ${Properties}
 `
-
-// const ScrollContainer = styled()

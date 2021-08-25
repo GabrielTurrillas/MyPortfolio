@@ -1,5 +1,5 @@
 export const colors = {
-  prmary: '#00c977',
+  primary: '#00c977',
   secondary: '#ff006f',
   background: '#010606'
 }
@@ -15,17 +15,17 @@ export const heroExternalPadding = {
 export const externalPadding = {
   mobileS: '2rem',
   mobileM: '3rem',
-  mobileL: '4rem',
+  mobileL: '6rem',
 }
 
 export const fontSizes = {
   mobileS: '1rem',
-  mobileM: '1.2rem',
-  mobileL: '1.3rem',
+  mobileL: '1.1rem',
+  tablet: '1.4rem',
 }
 
 export const smallTitleFontSizes = {
-  mobileL: ''
+  mobileL: '2rem'
 }
 
 export const bigTitleFontSizes = {

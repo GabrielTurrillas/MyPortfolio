@@ -3,7 +3,7 @@ import StoryRouter from 'storybook-react-router'
 import { defaultData } from "./data";
 
 export default {
-  title: 'Screens/HeroMovileFirst',
+  title: 'Screens/Hero',
   component: Hero,
   decorators: [StoryRouter()]
 }
