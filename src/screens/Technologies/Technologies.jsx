@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   device,
   GlobalStyles,
-  bigTitleFontSizes
+  externalPadding
 } from "../../styles";
 import { Card } from '../../components'
 
@@ -29,7 +29,9 @@ const Container = styled.div`
   width:100%;
   justify-content:center;
   background: #010606;
-  padding-bottom: 3rem;
+  @media ${device.desktop}{
+    padding:0 15rem;
+  }
 `
 
 const CardGrid = styled.div`
