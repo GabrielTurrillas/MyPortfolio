@@ -9,3 +9,8 @@ export { defaultData as defaultWorksData } from './Works/stories/data';
 
 export { default as Technologies } from './Technologies/Technologies';
 export { defaultData as defaultTechnologiesData } from './Technologies/stories/data';
+
+export { default as BigTitle } from './BigTitle/BigTitle';
+export { infoData as infoTitleData } from './BigTitle/stories/data'
+export { technologiesData as technologiesTitleData } from './BigTitle/stories/data'
+export { worksData as worksTitleData } from './BigTitle/stories/data'

@@ -34,6 +34,6 @@ export const smallTitleFontSizes = {
 }
 
 export const bigTitleFontSizes = {
-  mobileS: '2rem'
+  mobileS: '2.3rem'
 }
 
