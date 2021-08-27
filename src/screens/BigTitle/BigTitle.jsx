@@ -20,7 +20,7 @@ const Container = styled.div`
   justify-content: center;
   background:${colors.background};
   color:white;
-  padding:3rem 0;
+  padding-top:2rem;
   font-size:${bigTitleFontSizes.mobileS};
   font-weight:bold;
 `

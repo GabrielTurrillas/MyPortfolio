@@ -1,4 +1,48 @@
-import React from 'react';
+import React from 'react'
+import { Info, } from '..'
+import { GlobalStyles } from '../../styles'
+import { ButtonArea } from '../../components'
+
+
+const Works = ({
+  english,
+  title,
+  text,
+  engText,
+  imgPath,
+  imgStart,
+  pagePrimaryButtonData,
+  codeSecondaryButtonData,
+}) => {
+  const InfoData = {
+    english,
+    title,
+    text,
+    engText,
+    imgPath,
+    imgStart
+  }
+
+  const ButtonsData = {
+    pagePrimaryButtonData,
+    codeSecondaryButtonData
+  }
+
+  return (
+    <>
+      <GlobalStyles />
+      <Info {...InfoData} />
+      <ButtonArea {...ButtonsData} />
+    </>
+  )
+}
+
+export default Works
+
+
+
+
+/* import React from 'react';
 import styled from 'styled-components';
 import {
   GlobalStyles,
@@ -7,19 +51,21 @@ import {
   externalPadding,
   fontSizes,
   smallTitleFontSizes,
+  lineHight,
 } from '../../styles';
 
 import {
   PrimaryButton,
   SecondaryButton,
+  TextArea,
 } from '../../components'
 
 const Works = ({
   english,
-  projectName,
-  description,
-  engDescription,
-  imgURL,
+  title,
+  text,
+  engText,
+  imgPath,
   imgStart,
   pagePrimaryButtonData,
   codeSecondaryButtonData,
@@ -28,20 +74,26 @@ const Works = ({
     <>
       <GlobalStyles />
       <Container>
-        <TextArea>
-          <Title>
-            {projectName}
-          </Title>
-          <Text>
-            {english ? engDescription : description}
-          </Text>
-        </TextArea>
+        <TextArea
+          title={title}
+          engTitle={title}
+          text={text}
+          engText={engText}
+          english={english}
+        />
         <ImgArea>
-          <Img src={imgURL} alt={projectName} />
+          <Img
+            src={imgPath}
+            alt={title}
+          />
         </ImgArea>
         <ButtonArea>
-          <PrimaryButton {...pagePrimaryButtonData} />
-          <SecondaryButton {...codeSecondaryButtonData} />
+          <PrimaryButton
+            {...pagePrimaryButtonData}
+          />
+          <SecondaryButton
+            {...codeSecondaryButtonData}
+          />
         </ButtonArea>
       </Container>
     </>
@@ -55,10 +107,10 @@ const Container = styled.div`
   grid-template-areas:'TextArea'
                       'ImgArea'
                       'ButtonArea';
-                      height:100%;
-                      background:${colors.background};
+  height:100%;
+  background:${colors.background};
   color:white;
-  padding: ${externalPadding.mobileS};
+  padding: 1rem ${externalPadding.mobileS};
   align-items:center;
   text-align:center;
   @media ${device.mobileM} {
@@ -73,7 +125,7 @@ const Container = styled.div`
     grid-template-columns:1fr 1fr;
     grid-template-areas:'TextArea ImgArea'
                         'ButtonArea ButtonArea';
-    padding:3rem ${externalPadding.mobileL};                        
+    padding:3rem ${externalPadding.mobileL};
   }
   @media ${device.laptopL}{
     padding:4rem ${externalPadding.laptopL};
@@ -84,25 +136,10 @@ const Container = styled.div`
   }
 `
 
-const TextArea = styled.div`
-  grid-area: TextArea;
-  height:100%;
-  //background:red;
-  @media ${device.mobileL}{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
-  @media ${device.tablet}{
-    text-align:start;
-    padding-right:4rem;
-  }
-`
-
 const ImgArea = styled.div`
   grid-area: ImgArea;
-  padding:2rem 0;
   height:100%;
+  padding:2rem 0;
   @media ${device.tablet}{
     display:flex;
     padding:0;
@@ -128,43 +165,14 @@ const ButtonArea = styled.div`
   @media ${device.desktop}{
     padding:0 15rem;
   }
-`
-
-const Title = styled.h2`
-  margin-bottom:2rem;
-  @media ${device.mobileL}{
-    font-size:${smallTitleFontSizes.mobileL};
-    margin-bottom:4rem;
-  }
-  @media ${device.tablet}{
-    margin-bottom:3rem;
-  }
-  @media ${device.desktop}{
-    font-size:${smallTitleFontSizes.desktop};
-    margin-bottom:4rem;
-  }
-`
-
-const Text = styled.article`
-  line-height:1.5rem;
-  @media ${device.mobileL}{
-    font-size:${fontSizes.mobileL};
-  }
-  @media ${device.laptopL}{
-    font-size:${fontSizes.laptopL};
-  }
-  @media ${device.desktop}{
-    line-height:1.9rem;
-    font-size:${fontSizes.desktop};
-  }
-`
+  `
 
 const Img = styled.img`
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
-  @media ${device.tablet}{
-    
-  }
-`
+` */
+
+
+
 

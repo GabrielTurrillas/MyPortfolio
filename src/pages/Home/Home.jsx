@@ -17,7 +17,9 @@ const Home = ({
       <Hero {...hero} />
       <BigTitle {...worksTitle} />
       <Works {...works} />
+      <Works {...works} />
       <BigTitle {...infoTitle} />
+      <Info {...info} />
       <Info {...info} />
       <BigTitle {...technologiesTitle} />
       <Technologies {...technologies} />

@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device, GlobalStyles } from "../../styles";
+import {
+  device,
+  GlobalStyles,
+  colors
+} from "../../styles";
 
 const Card = ({ technology }) => {
   console.log(technology)
@@ -47,7 +51,7 @@ const TitleContainer = styled.div`
 `;
 
 const CardTitle = styled.h4`
-  color: black;
+  color: white;
 `;
 
 const TecnologiesContainer = styled.div`
@@ -67,7 +71,8 @@ const Technology = styled.div`
 const CardContainer = styled.div`
   display:flex;
   flex-direction:column;
-  background:white;
+  background:${colors.background};
+  color:white;
   width:100%;
   height:fit-content;
   padding:3rem;

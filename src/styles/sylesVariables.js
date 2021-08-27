@@ -34,6 +34,9 @@ export const smallTitleFontSizes = {
 }
 
 export const bigTitleFontSizes = {
-  mobileS: '2.3rem'
+  mobileS: '2.4rem'
 }
 
+export const lineHight = {
+  mobileS: '1.2rem'
+}

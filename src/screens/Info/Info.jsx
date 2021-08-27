@@ -6,24 +6,32 @@ import {
   externalPadding,
   colors,
   fontSizes,
-  smallTitleFontSizes
+  smallTitleFontSizes,
+  lineHight
 } from '../../styles';
+import TextArea from '../../components/TextArea/TextArea';
 
-const Info = ({ english, infoImgSrc, engTitle, title, engText, text }) => {
+const Info = ({
+  english,
+  title,
+  engTitle,
+  text,
+  engText,
+  imgPath,
+}) => {
   return (
     <>
       <GlobalStyles />
       <Container>
-        <TextArea>
-          <Title>
-            {english ? engTitle : title}
-          </Title>
-          <Text>
-            {english ? engText : text}
-          </Text>
-        </TextArea>
+        <TextArea
+          title={title}
+          engTitle={engTitle}
+          text={text}
+          engText={engText}
+          english={english}
+        />
         <ImgArea>
-          <Img src={infoImgSrc} />
+          <Img src={imgPath} />
         </ImgArea>
       </Container>
     </>
@@ -37,10 +45,11 @@ const Container = styled.div`
   grid-template-rows:50% 50%;
   grid-template-areas:'TextArea'
                       'ImgArea';
-  height: 100%;
+  height: 100%; 
   background: ${colors.background};
   color: white;
-  padding: ${externalPadding.mobileS};
+  //background:red;
+  padding:0 ${externalPadding.mobileS};
   align-items:center;
   text-align:center;
   @media ${device.mobileM} {
@@ -63,27 +72,8 @@ const Container = styled.div`
   }
   `
 
-const TextArea = styled.div`
-  grid-area: TextArea;
-  height:100%;
-  //background:blue;
-  @media ${device.mobileL}{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
-  @media ${device.tablet} {
-    text-align:start;
-    padding-right:4rem;
-  }
-  @media ${device.laptopL}{
-    padding-right:4rem;
-  }
-`
-
 const ImgArea = styled.div`
   grid-area: ImgArea;
-  padding:0 2rem;
   height:100%;
   padding:2rem 0;
   @media ${device.laptopL}{
@@ -103,7 +93,7 @@ const Title = styled.h2`
 `
 
 const Text = styled.article`
-  line-height:1.5rem;
+  line-height:${lineHight.mobileS};
   @media ${device.mobileL}{
     font-size:${fontSizes.mobileL};
   }
