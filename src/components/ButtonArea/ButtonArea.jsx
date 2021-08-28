@@ -29,6 +29,7 @@ const Container = styled.div`
   display:flex;
   justify-content:space-evenly;
   height:100%;
+  padding:3rem;
   background:${colors.background};
   @media ${device.mobileL}{
     justify-content:space-between;

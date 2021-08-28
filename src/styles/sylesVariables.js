@@ -16,7 +16,7 @@ export const externalPadding = {
   mobileS: '2rem',
   mobileM: '3rem',
   mobileL: '6rem',
-  laptopL: '13rem',
+  laptopL: '15rem',
   desktop: '20rem'
 }
 

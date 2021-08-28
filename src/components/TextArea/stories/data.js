@@ -1,3 +1,5 @@
+/* TextArea Data */
+
 export const defaultData = {
   title: 'Title',
   engTitle: 'Title',

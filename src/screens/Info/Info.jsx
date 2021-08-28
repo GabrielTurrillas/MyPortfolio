@@ -5,34 +5,22 @@ import {
   device,
   externalPadding,
   colors,
-  fontSizes,
-  smallTitleFontSizes,
-  lineHight
 } from '../../styles';
-import TextArea from '../../components/TextArea/TextArea';
+import {
+  TextArea,
+  ImgArea,
+} from '../../components';
 
 const Info = ({
-  english,
-  title,
-  engTitle,
-  text,
-  engText,
-  imgPath,
+  textAreaData,
+  imgAreaData,
 }) => {
   return (
     <>
       <GlobalStyles />
       <Container>
-        <TextArea
-          title={title}
-          engTitle={engTitle}
-          text={text}
-          engText={engText}
-          english={english}
-        />
-        <ImgArea>
-          <Img src={imgPath} />
-        </ImgArea>
+        <TextArea {...textAreaData} />
+        <ImgArea {...imgAreaData} />
       </Container>
     </>
   )
@@ -48,7 +36,6 @@ const Container = styled.div`
   height: 100%; 
   background: ${colors.background};
   color: white;
-  //background:red;
   padding:0 ${externalPadding.mobileS};
   align-items:center;
   text-align:center;
@@ -70,43 +57,4 @@ const Container = styled.div`
   @media ${device.desktop}{
     padding:4rem ${externalPadding.desktop};
   }
-  `
-
-const ImgArea = styled.div`
-  grid-area: ImgArea;
-  height:100%;
-  padding:2rem 0;
-  @media ${device.laptopL}{
-    padding-left:8rem;
-  }
-`
-
-const Title = styled.h2`
-  margin: 2rem 0;
-  @media ${device.mobileL}{
-    font-size:${smallTitleFontSizes.mobileL};
-    margin-bottom:4rem;
-  }
-  @media ${device.desktop}{
-    font-size:${smallTitleFontSizes.desktop};
-  }
-`
-
-const Text = styled.article`
-  line-height:${lineHight.mobileS};
-  @media ${device.mobileL}{
-    font-size:${fontSizes.mobileL};
-  }
-  @media ${device.tablet}{
-    font-size: ${fontSizes.tablet}
-  }
-  @media ${device.desktop}{
-    line-height:1.9rem;
-    font-size:${fontSizes.desktop};
-  }
-`
-
-const Img = styled.img`
-  height:100%;
-  width:100%;
 `
