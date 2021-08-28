@@ -5,9 +5,9 @@ const imgWidthInfo = {
   mobileS: '100%',
   mobileM: '100%',
   mobileL: '100%',
-  tablet: '100%',
+  tablet: '70%',
   laptop: '100%',
-  laptopL: '100%',
+  laptopL: '60%',
   desktop: '100%'
 }
 
@@ -15,9 +15,9 @@ const imgWidthWorks = {
   mobileS: '100%',
   mobileM: '100%',
   mobileL: '100%',
-  tablet: '100%',
+  tablet: '90%',
   laptop: '100%',
-  laptopL: '100%',
+  laptopL: '80%',
   desktop: '100%'
 }
 

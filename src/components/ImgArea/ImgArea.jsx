@@ -29,6 +29,9 @@ const Img = styled.img`
   width: ${({ imgWidth: { mobileS } }) => mobileS};
   height:auto;
   @media ${device.tablet}{
-    width:80%;
+    width:${({ imgWidth: { tablet } }) => tablet};
+  }
+  @media ${device.laptopL}{
+    width:${({ imgWidth: { laptopL } }) => laptopL};
   }
 `
