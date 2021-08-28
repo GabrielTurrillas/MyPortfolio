@@ -24,12 +24,13 @@ export const fontSizes = {
   mobileS: '1rem',
   mobileL: '1.1rem',
   tablet: '1.2rem',
-  laptopL: '1.3',
+  laptopL: '1.4rem',
   desktop: '1.4rem'
 }
 
 export const smallTitleFontSizes = {
   mobileL: '2rem',
+  laptopL: '2.4rem',
   desktop: '3rem'
 }
 
@@ -38,5 +39,7 @@ export const bigTitleFontSizes = {
 }
 
 export const lineHight = {
-  mobileS: '1.2rem'
+  mobileS: '1.2rem',
+  tablet: '1.4rem',
+  laptop: '1.7rem',
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Hero, Works, Info, Technologies, BigTitle } from '../../screens';
 
-
 const Home = ({
   hero,
   works,

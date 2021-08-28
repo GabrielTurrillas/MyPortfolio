@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GlobalStyles, colors, bigTitleFontSizes } from '../../styles';
+import { GlobalStyles, colors, bigTitleFontSizes, device } from '../../styles';
 
 const BigTitle = ({ text }) => {
   return (
@@ -23,4 +23,14 @@ const Container = styled.div`
   padding-top:2rem;
   font-size:${bigTitleFontSizes.mobileS};
   font-weight:bold;
+  @media ${device.mobileM} {
+    font-size:2.7rem;
+  }
+  @media ${device.mobileL} {
+    font-size:3.5rem;
+  }
+  @media ${device.tablet} {
+    font-size:4rem;
+    padding:2rem 0
+  }
 `

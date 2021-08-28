@@ -37,8 +37,9 @@ const Container = styled.div`
   @media ${device.tablet}{
     justify-content:space-evenly;
     align-items:end;
+    padding:0 20rem;
   }
-  @media ${device.desktop}{
-    padding:0 15rem;
+  @media ${device.laptopL}{
+    padding:3rem 22rem;
   }
 `

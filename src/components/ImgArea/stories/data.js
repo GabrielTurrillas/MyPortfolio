@@ -12,7 +12,7 @@ const imgWidthInfo = {
 }
 
 const imgWidthWorks = {
-  mobileS: '20%',
+  mobileS: '100%',
   mobileM: '100%',
   mobileL: '100%',
   tablet: '100%',

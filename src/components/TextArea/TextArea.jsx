@@ -58,6 +58,12 @@ const Title = styled.h2`
     font-size:${smallTitleFontSizes.mobileL};
     margin-bottom:4rem;
   }
+  @media ${device.tablet}{
+    margin-bottom:2.5rem;
+  }
+  @media ${device.laptopL}{
+    font-size: ${smallTitleFontSizes.laptopL}
+  }
   @media ${device.desktop}{
     font-size:${smallTitleFontSizes.desktop};
   }
@@ -68,8 +74,12 @@ const Text = styled.article`
   @media ${device.mobileL}{
     font-size:${fontSizes.mobileL};
   }
+  @media ${device.tablet}{
+    line-height:${lineHight.tablet}; 
+  }
   @media ${device.laptopL}{
     font-size:${fontSizes.laptopL};
+    line-height:${lineHight.laptop}; 
   }
   @media ${device.desktop}{
     line-height:1.9rem;
