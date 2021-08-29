@@ -7,11 +7,13 @@ import { ButtonArea } from '../../components'
 const Works = ({
   imgAreaData,
   textAreaData,
+  textStart,
   buttonAreaData,
 }) => {
   const infoData = {
     imgAreaData,
-    textAreaData
+    textAreaData,
+    textStart,
   }
   return (
     <>
@@ -22,8 +24,4 @@ const Works = ({
   )
 }
 
-export default Works
-
-
-
-
+export default Works;

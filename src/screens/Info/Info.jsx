@@ -14,13 +14,14 @@ import {
 const Info = ({
   textAreaData,
   imgAreaData,
+  textStart,
 }) => {
   return (
     <>
       <GlobalStyles />
-      <Container>
-        <TextArea {...textAreaData} />
-        <ImgArea {...imgAreaData} />
+      <Container textStart={textStart}>
+        <TextArea {...textAreaData} textStart={textStart} />
+        <ImgArea {...imgAreaData} textStart={textStart} />
       </Container>
     </>
   )
@@ -30,26 +31,25 @@ export default Info
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows:50% 50%;
   grid-template-areas:'TextArea'
                       'ImgArea';
-  height: 100%; 
+  height: 100%;
   background: ${colors.background};
   color: white;
   padding:0 ${externalPadding.mobileS};
-  align-items:center;
   text-align:center;
   @media ${device.mobileM} {
     padding: ${externalPadding.mobileM};
+    row-gap:3rem;
   }
   @media ${device.mobileL} {
     padding:2rem ${externalPadding.mobileL};
-    grid-template-rows: 1fr 1fr;
+    row-gap:2rem;
   }
   @media ${device.tablet} {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:'TextArea ImgArea';
+    grid-template-areas:${({ textStart }) => (textStart ? `'TextArea ImgArea'` : `'ImgArea TextArea'`)};
   }
   @media ${device.laptopL}{
     padding:0 ${externalPadding.laptopL}

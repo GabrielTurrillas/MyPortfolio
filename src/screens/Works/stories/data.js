@@ -1,12 +1,21 @@
 /* WORKS DATA */
+
 import {
-  worksImgAreaData,
-  defaultButtonAreaData,
-  defaultTextAreaData
+  defaultButtonAreaData
 } from '../../../components'
 
+import {
+  defaultWorksInfoData,
+  worksInfoTextStartFalseData,
+} from '../..'
+
+
 export const defaultData = {
-  imgAreaData: worksImgAreaData,
-  buttonAreaData: defaultButtonAreaData,
-  textAreaData: defaultTextAreaData,
+  ...defaultWorksInfoData,
+  buttonAreaData: defaultButtonAreaData
+}
+
+export const textStartFalseData = {
+  ...worksInfoTextStartFalseData,
+  buttonAreaData: defaultButtonAreaData
 }

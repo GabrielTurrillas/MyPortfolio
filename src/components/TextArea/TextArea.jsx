@@ -16,15 +16,16 @@ const TextArea = ({
   text,
   engText,
   english,
+  textStart
 }) => {
   return (
     <>
       <GlobalStyles />
-      <Container>
-        <Title>
+      <Container textStart={textStart}>
+        <Title textStart={textStart}>
           {english ? engTitle : title}
         </Title>
-        <Text>
+        <Text textStart={textStart}>
           {english ? engText : text}
         </Text>
       </Container>
@@ -47,7 +48,7 @@ const Container = styled.div`
     justify-content:center;
   }
   @media ${device.tablet}{
-    text-align:start;
+    text-align:${({ textStart }) => textStart ? `start` : `center`};
     padding-right:4rem;
   }
 `
@@ -75,7 +76,8 @@ const Text = styled.article`
     font-size:${fontSizes.mobileL};
   }
   @media ${device.tablet}{
-    line-height:${lineHight.tablet}; 
+    line-height:${lineHight.tablet};
+    
   }
   @media ${device.laptopL}{
     font-size:${fontSizes.laptopL};

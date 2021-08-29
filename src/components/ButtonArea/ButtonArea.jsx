@@ -29,11 +29,10 @@ const Container = styled.div`
   display:flex;
   justify-content:space-evenly;
   height:100%;
-  padding:3rem;
+  padding:0 3rem;
+  padding-bottom: 2rem;
   background:${colors.background};
-  @media ${device.mobileL}{
-    justify-content:space-between;
-  }
+  
   @media ${device.tablet}{
     justify-content:space-evenly;
     align-items:end;

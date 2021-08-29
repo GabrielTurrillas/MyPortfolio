@@ -1,6 +1,6 @@
 import React from 'react';
 import Works from '../Works';
-import { defaultData } from './data';
+import { defaultData, textStartFalseData } from './data';
 import StoryRouter from 'storybook-react-router';
 
 export default {
@@ -12,6 +12,10 @@ export default {
 const Template = (args) => <Works {...args} />;
 
 export const Default = Template.bind({});
+export const TextStartFalse = Template.bind({});
+
 Default.args = {
   ...defaultData
 };
+
+TextStartFalse.args = { ...textStartFalseData };

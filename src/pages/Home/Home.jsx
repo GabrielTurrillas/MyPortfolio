@@ -4,7 +4,9 @@ import { Hero, Works, Info, Technologies, BigTitle } from '../../screens';
 const Home = ({
   hero,
   works,
+  worksTextStartFalse,
   info,
+  infoTextStartFalse,
   technologies,
   infoTitle,
   technologiesTitle,
@@ -16,10 +18,10 @@ const Home = ({
       <Hero {...hero} />
       <BigTitle {...worksTitle} />
       <Works {...works} />
-      <Works {...works} />
+      <Works {...worksTextStartFalse} />
       <BigTitle {...infoTitle} />
       <Info {...info} />
-      <Info {...info} />
+      <Info {...infoTextStartFalse} />
       <BigTitle {...technologiesTitle} />
       <Technologies {...technologies} />
     </>
