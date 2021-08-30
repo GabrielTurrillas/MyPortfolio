@@ -3,19 +3,24 @@ import styled from 'styled-components';
 import {
   GlobalStyles,
   device,
-  colors
+  colors,
+  externalPadding,
 } from '../../styles';
-import { PrimaryButton, SecondaryButton } from '..';
+import {
+  PrimaryButton,
+  SecondaryButton
+} from '..';
 
 const ButtonArea = ({
   pagePrimaryButtonData,
-  codeSecondaryButtonData
+  codeSecondaryButtonData,
+  textStart = true
 }) => {
   return (
     <>
       <GlobalStyles />
-      <Container>
-        <PrimaryButton {...pagePrimaryButtonData} />
+      <Container textStart={textStart}>
+        <PrimaryButtonA {...pagePrimaryButtonData} />
         <SecondaryButton {...codeSecondaryButtonData} />
       </Container>
     </>
@@ -27,18 +32,25 @@ export default ButtonArea;
 const Container = styled.div`
   grid-area: ButtonArea;
   display:flex;
-  justify-content:space-evenly;
+  justify-content:center;
   height:100%;
-  padding:0 3rem;
-  padding-bottom: 2rem;
   background:${colors.background};
-  
+  @media ${device.mobileL}{
+    padding:0 ${externalPadding.mobileL};
+  }
   @media ${device.tablet}{
-    justify-content:space-evenly;
+    justify-content:start;
     align-items:end;
-    padding:0 20rem;
   }
   @media ${device.laptopL}{
-    padding:3rem 22rem;
+    padding:0 ${externalPadding.laptopL};
+    padding-top:1rem;
   }
+  @media ${device.desktop}{
+    padding:0 ${externalPadding.desktop};
+  }
+`
+
+const PrimaryButtonA = styled(PrimaryButton)`
+  margin-right:2rem;
 `

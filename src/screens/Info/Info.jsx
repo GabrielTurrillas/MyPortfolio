@@ -47,14 +47,17 @@ const Container = styled.div`
     row-gap:2rem;
   }
   @media ${device.tablet} {
+    padding-top:3rem;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:${({ textStart }) => (textStart ? `'TextArea ImgArea'` : `'ImgArea TextArea'`)};
   }
   @media ${device.laptopL}{
-    padding:0 ${externalPadding.laptopL}
+    padding:0 ${externalPadding.laptopL};
+    padding-top:9rem;
   }
   @media ${device.desktop}{
     padding:4rem ${externalPadding.desktop};
+    padding-top:5rem;
   }
 `

@@ -3,18 +3,19 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { colors, GlobalStyles, device } from '../../styles';
 
-
-const PrimaryButton = ({ english, engButtonText, buttonText, path, typeOfButton }) => {
+//{ english, engButtonText, buttonText, path, typeOfButton }
+const PrimaryButton = props => {
+  const { english, engButtonText, buttonText, path, typeOfButton } = props
   const makeContainer = (typeOfButton = 'L') => {
     if (typeOfButton === 'A') {
       return (
-        <AnchorContainer href={path}>
+        <AnchorContainer {...props} href={path}>
           {english ? engButtonText : buttonText}
         </AnchorContainer>
       )
     } else if (typeOfButton === 'L') {
       return (
-        <LinkContainer to={path}>
+        <LinkContainer {...props} to={path}>
           {english ? engButtonText : buttonText}
         </LinkContainer>
       )

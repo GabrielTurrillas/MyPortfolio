@@ -33,6 +33,10 @@ const Container = styled.div`
     font-size:4rem;
     padding:2rem 0
   }
+  @media ${device.laptopL}{
+    font-size:6rem;
+    padding:6rem 0;
+  }
   @media ${device.desktop} {
     font-size:5rem;
   }

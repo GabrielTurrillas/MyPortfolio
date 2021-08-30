@@ -24,7 +24,7 @@ export const fontSizes = {
   mobileS: '1rem',
   mobileL: '1.1rem',
   tablet: '1.2rem',
-  laptopL: '1.4rem',
+  laptopL: '1.3rem',
   desktop: '1.4rem'
 }
 

@@ -1,6 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Info, } from '..'
-import { GlobalStyles } from '../../styles'
+import {
+  GlobalStyles,
+  colors,
+  device
+} from '../../styles'
 import { ButtonArea } from '../../components'
 
 
@@ -18,10 +23,16 @@ const Works = ({
   return (
     <>
       <GlobalStyles />
-      <Info {...infoData} />
-      <ButtonArea {...buttonAreaData} />
+      <Container>
+        <Info {...infoData} />
+        <ButtonArea {...buttonAreaData} />
+      </Container>
     </>
   )
 }
 
 export default Works;
+
+const Container = styled.div`
+  background: ${colors.background};  
+`
