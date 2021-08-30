@@ -15,6 +15,7 @@ export { defaultData as defaultTextAreaData } from './TextArea/stories/data';
 
 export { default as ButtonArea } from './ButtonArea/ButtonArea';
 export { defaultData as defaultButtonAreaData } from './ButtonArea/stories/data';
+export { textStartFalseData as textStartFalseButtonAreaData } from './ButtonArea/stories/data';
 
 export { default as ImgArea } from './ImgArea/ImgArea';
 export { infoData as infoImgAreaData } from './ImgArea/stories/data';

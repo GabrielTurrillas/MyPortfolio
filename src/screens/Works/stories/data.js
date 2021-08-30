@@ -1,7 +1,8 @@
 /* WORKS DATA */
 
 import {
-  defaultButtonAreaData
+  defaultButtonAreaData,
+  textStartFalseButtonAreaData
 } from '../../../components'
 
 import {
@@ -17,5 +18,5 @@ export const defaultData = {
 
 export const textStartFalseData = {
   ...worksInfoTextStartFalseData,
-  buttonAreaData: defaultButtonAreaData
+  buttonAreaData: textStartFalseButtonAreaData
 }

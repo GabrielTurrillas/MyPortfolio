@@ -49,7 +49,8 @@ const Container = styled.div`
   }
   @media ${device.tablet}{
     text-align:${({ textStart }) => textStart ? `start` : `center`};
-    padding-right:4rem;
+    justify-content: ${({ textStart }) => textStart ? `start` : `center`};
+    padding-right:${({ textStart }) => textStart ? `4rem` : `0`};  
   }
 `
 
@@ -77,7 +78,6 @@ const Text = styled.article`
   }
   @media ${device.tablet}{
     line-height:${lineHight.tablet};
-    
   }
   @media ${device.laptopL}{
     font-size:${fontSizes.laptopL};
