@@ -1,7 +1,8 @@
 export const colors = {
   primary: '#00c977',
   secondary: '#ff006f',
-  background: '#010606'
+  background: '#010606',
+  navBackground: 'black'
 }
 
 export const heroExternalPadding = {

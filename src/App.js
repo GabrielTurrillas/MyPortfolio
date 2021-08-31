@@ -1,9 +1,25 @@
-import React from 'react'
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import {
+  Home,
+  homeDefaultData
+} from './pages'
+
 
 const App = () => {
   return (
     <>
-      App
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Home {...homeDefaultData} />
+          </Route>
+        </Switch>
+      </Router>
     </>
   )
 }

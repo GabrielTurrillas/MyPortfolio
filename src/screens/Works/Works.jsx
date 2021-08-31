@@ -4,7 +4,6 @@ import { Info, } from '..'
 import {
   GlobalStyles,
   colors,
-  device
 } from '../../styles'
 import { ButtonArea } from '../../components'
 

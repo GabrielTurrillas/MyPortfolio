@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {
   device,
   GlobalStyles,
-  externalPadding
 } from "../../styles";
 import { Card } from '../../components'
 
