@@ -14,15 +14,16 @@ import {
 const ButtonArea = ({
   pagePrimaryButtonData,
   codeSecondaryButtonData,
-  textStart = true
+  english,
+  textStart = true,
 }) => {
   return (
     <>
       <GlobalStyles />
       <Container textStart={textStart}>
         <Col1 textStart={textStart}>
-          <PrimaryButtonA {...pagePrimaryButtonData} />
-          <SecondaryButton {...codeSecondaryButtonData} />
+          <PrimaryButtonA {...pagePrimaryButtonData} english={english} />
+          <SecondaryButton {...codeSecondaryButtonData} english={english} />
         </Col1>
         <Col2>
 

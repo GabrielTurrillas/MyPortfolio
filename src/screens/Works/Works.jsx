@@ -13,6 +13,7 @@ const Works = ({
   textAreaData,
   textStart,
   buttonAreaData,
+  english
 }) => {
   const infoData = {
     imgAreaData,
@@ -23,8 +24,8 @@ const Works = ({
     <>
       <GlobalStyles />
       <Container>
-        <Info {...infoData} />
-        <ButtonArea {...buttonAreaData} />
+        <Info {...infoData} english={english} />
+        <ButtonArea {...buttonAreaData} english={english} />
       </Container>
     </>
   )

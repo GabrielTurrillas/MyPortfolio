@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { GlobalStyles, colors, bigTitleFontSizes, device } from '../../styles';
 
-const BigTitle = ({ text }) => {
+const BigTitle = ({ text, engText, english }) => {
   return (
     <>
       <GlobalStyles />
       <Container>
-        {text}
+        {english ? engText : text}
       </Container>
     </>
   )

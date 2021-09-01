@@ -1,17 +1,19 @@
 import Home from '../Home';
 import StoryRouter from 'storybook-react-router';
-import {
-  defaultHeroData,
-  defaultWorksData,
-  defaultInfoData,
-  defaultTechnologiesData
-} from '../../../screens';
 import { defaultData } from './data'
+import { LenguajeProvider } from '../../../components/Context/LenguageContext'
 
 export default {
   title: 'Pages/Home',
   component: Home,
-  decorators: [StoryRouter()],
+  decorators: [
+    StoryRouter(),
+    (Story) => (
+      <LenguajeProvider>
+        <Story />
+      </LenguajeProvider>
+    )
+  ],
 }
 
 const Template = (args) => <Home {...args} />

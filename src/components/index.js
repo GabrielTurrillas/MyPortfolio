@@ -20,3 +20,9 @@ export { textStartFalseData as textStartFalseButtonAreaData } from './ButtonArea
 export { default as ImgArea } from './ImgArea/ImgArea';
 export { infoData as infoImgAreaData } from './ImgArea/stories/data';
 export { worksData as worksImgAreaData } from './ImgArea/stories/data';
+
+export { default as Navbar } from './Navbar/Navbar';
+
+export { default as Switch } from './Switch/Switch';
+
+export { default as Sidebar } from './Sidebar/Sidebar';

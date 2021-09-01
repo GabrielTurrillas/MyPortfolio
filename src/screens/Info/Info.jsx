@@ -15,12 +15,13 @@ const Info = ({
   textAreaData,
   imgAreaData,
   textStart,
+  english
 }) => {
   return (
     <>
       <GlobalStyles />
       <Container textStart={textStart}>
-        <TextArea {...textAreaData} textStart={textStart} />
+        <TextArea {...textAreaData} textStart={textStart} english={english} />
         <ImgArea {...imgAreaData} textStart={textStart} />
       </Container>
     </>

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { colors } from '../../styles';
 import {
   Hero,
   Works,
@@ -7,7 +8,7 @@ import {
   Technologies,
   BigTitle
 } from '../../screens';
-import { colors } from '../../styles';
+import { LenguajeContext } from '../../components/Context/LenguageContext'
 
 const Home = ({
   hero,
@@ -20,19 +21,19 @@ const Home = ({
   technologiesTitle,
   worksTitle,
 }) => {
-  console.log('worksTitle', worksTitle)
+  const [english, setEnglish] = useContext(LenguajeContext)
   return (
     <>
       <Container>
-        <Hero {...hero} />
-        <BigTitle {...worksTitle} />
-        <Works {...works} />
-        <Works {...worksTextStartFalse} />
-        <BigTitle {...infoTitle} />
-        <Info {...info} />
-        <Info {...infoTextStartFalse} />
-        <BigTitle {...technologiesTitle} />
-        <Technologies {...technologies} />
+        <Hero {...hero} english={english} />
+        <BigTitle {...worksTitle} english={english} />
+        <Works {...works} english={english} />
+        <Works {...worksTextStartFalse} english={english} />
+        <BigTitle {...infoTitle} english={english} />
+        <Info {...info} english={english} />
+        <Info {...infoTextStartFalse} english={english} />
+        <BigTitle {...technologiesTitle} english={english} />
+        <Technologies {...technologies} english={english} />
       </Container>
     </>
   )

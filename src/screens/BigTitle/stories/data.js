@@ -1,15 +1,19 @@
 export const defaultData = {
-  text: 'Title'
+  text: 'Titulo',
+  engText: 'Title'
 }
 
 export const worksData = {
-  text: 'Works'
+  text: 'Proyectos',
+  engText: 'Works'
 }
 
 export const infoData = {
-  text: 'Habilities'
+  text: 'Habilidades',
+  engText: 'Habilities',
 }
 
 export const technologiesData = {
-  text: 'Technologies'
+  text: 'Tecnologias',
+  engText: 'Technologies'
 }

@@ -1,1 +1,6 @@
-export const defaultData = {}
+
+
+export const defaultData = {
+  isOpen: true,
+  toggle: ''
+}
