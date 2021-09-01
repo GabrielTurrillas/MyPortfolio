@@ -6,13 +6,10 @@ import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll';
 import { GlobalStyles, colors } from '../../styles';
 import { Switch } from '../';
-import { LenguajeContext } from '../Context/LenguageContext';
 
 
-
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, english, setEnglish }) => {
   const [scrollNav, setScrollNav] = useState(false)
-  const [english, setEnglish] = useContext(LenguajeContext)
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true)

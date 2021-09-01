@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { colors } from '../../styles';
 import {
@@ -8,7 +8,12 @@ import {
   Technologies,
   BigTitle
 } from '../../screens';
-import { LenguajeContext } from '../../components/Context/LenguageContext'
+import {
+  Navbar,
+  Sidebar
+} from '../../components';
+
+
 
 const Home = ({
   hero,
@@ -21,9 +26,15 @@ const Home = ({
   technologiesTitle,
   worksTitle,
 }) => {
-  const [english, setEnglish] = useContext(LenguajeContext)
+  const [english, setEnglish] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar setEnglish={setEnglish} toggle={toggle} english={english} />
       <Container>
         <Hero {...hero} english={english} />
         <BigTitle {...worksTitle} english={english} />

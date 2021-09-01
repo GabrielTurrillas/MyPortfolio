@@ -11,6 +11,22 @@ const Sidebar = ({ isOpen, toggle }) => {
         <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
+        <SidebarWrapper>
+          <SidebarMenu>
+            <SidebarLink to="Works" onClick={toggle}>
+              Works
+            </SidebarLink>
+            <SidebarLink to="technologies" onClick={toggle}>
+              Technologies
+            </SidebarLink>
+            <SidebarLink to="About" onClick={toggle}>
+              About
+            </SidebarLink>
+            <SideBtnWrap>
+              <SidebarRoute to="/contact">contact</SidebarRoute>
+            </SideBtnWrap>
+          </SidebarMenu>
+        </SidebarWrapper>
       </Container>
     </>
   )
@@ -21,7 +37,7 @@ export default Sidebar
 
 const Container = styled.aside`
   position:fixed;
-  z-index:999;
+  z-index:1000;
   width:100%;
   height:100%;
   background:#0d0d0d;
@@ -46,7 +62,22 @@ const Icon = styled.div`
   font-size: 2rem;
   cursor: pointer;
   outline: none;
-  `;
+`;
+
+const SidebarWrapper = styled.div`
+  color: #fff;
+`;
+
+const SidebarMenu = styled.ul`
+  display:flex;
+  flex-direction:column;
+  height:80vh;
+  justify-content:space-evenly;
+  text-align:center;
+  @media screen and (max-width:480px) {
+    grid-template-rows: repeat(6, 60px);
+  }
+`;
 
 const SidebarLink = styled(LinkS)`
 display: flex;
