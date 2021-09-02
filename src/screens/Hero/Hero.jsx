@@ -6,7 +6,6 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 const Hero = ({ english, buttonData }) => {
   return (
     <>
-      {console.log('english, buttonData:', english, buttonData)}
       <GlobalStyles />
       <Container>
         <HeroBg>
