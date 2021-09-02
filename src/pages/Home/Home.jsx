@@ -31,27 +31,34 @@ const Home = ({
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+  const toggleSwitch = () => {
+    setEnglish(!english)
+  }
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar setEnglish={setEnglish} toggle={toggle} english={english} />
-      <Container>
-        <Hero {...hero} english={english} />
+      <Sidebar isOpen={isOpen} toggle={toggle} english={english} toggleSwitch={toggleSwitch} />
+      <Navbar setEnglish={setEnglish} toggle={toggle} english={english} toggleSwitch={toggleSwitch} />
+      <Hero {...hero} english={english} />
+      <Wrapper id='works'>
         <BigTitle {...worksTitle} english={english} />
         <Works {...works} english={english} />
-        <Works {...worksTextStartFalse} english={english} />
+        <Works {...worksTextStartFalse} english={english} id='works' />
+      </Wrapper>
+      <Wrapper id='habilities'>
         <BigTitle {...infoTitle} english={english} />
         <Info {...info} english={english} />
         <Info {...infoTextStartFalse} english={english} />
+      </Wrapper>
+      <Wrapper id='technologies'>
         <BigTitle {...technologiesTitle} english={english} />
         <Technologies {...technologies} english={english} />
-      </Container>
+      </Wrapper>
     </>
   )
 }
 
 export default Home
 
-const Container = styled.div`
+const Wrapper = styled.div`
   background:${colors.background};
 `

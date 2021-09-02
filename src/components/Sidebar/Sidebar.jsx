@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 import { Link as LinkS } from 'react-scroll';
 import { Link as LinkR } from 'react-router-dom';
+import { Switch } from '..';
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen, toggle, english, toggleSwitch }) => {
   return (
     <>
       <Container isOpen={isOpen} onClick={toggle}>
@@ -13,17 +14,23 @@ const Sidebar = ({ isOpen, toggle }) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="Works" onClick={toggle}>
-              Works
+            <SwitchDiv>
+              <Text>
+                English
+              </Text>
+              <Switch isToggled={english} onToggle={toggleSwitch} />
+            </SwitchDiv>
+            <SidebarLink to="works" onClick={toggle}>
+              {english ? 'Works' : 'Proyectos'}
+            </SidebarLink>
+            <SidebarLink to="habilities" onClick={toggle}>
+              {english ? 'Habilities' : 'Habilidades'}
             </SidebarLink>
             <SidebarLink to="technologies" onClick={toggle}>
-              Technologies
-            </SidebarLink>
-            <SidebarLink to="About" onClick={toggle}>
-              About
+              {english ? 'Technologies' : 'Tecnologias'}
             </SidebarLink>
             <SideBtnWrap>
-              <SidebarRoute to="/contact">contact</SidebarRoute>
+              <SidebarRoute to="/contact">{english ? 'Contact' : 'Contacto'}</SidebarRoute>
             </SideBtnWrap>
           </SidebarMenu>
         </SidebarWrapper>
@@ -73,6 +80,7 @@ const SidebarMenu = styled.ul`
   flex-direction:column;
   height:80vh;
   justify-content:space-evenly;
+  align-items:center;
   text-align:center;
   @media screen and (max-width:480px) {
     grid-template-rows: repeat(6, 60px);
@@ -118,4 +126,13 @@ text-decoration: none;
   background: #fff;
   color:#010606;
 }
+`
+const SwitchDiv = styled.div`
+  display:flex;
+  align-items:center;
+`
+
+const Text = styled.p`
+  margin-right:1rem;
+  font-size:1.5rem;
 `

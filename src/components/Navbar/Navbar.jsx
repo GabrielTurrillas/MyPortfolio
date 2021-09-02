@@ -8,7 +8,7 @@ import { GlobalStyles, colors } from '../../styles';
 import { Switch } from '../';
 
 
-const Navbar = ({ toggle, english, setEnglish }) => {
+const Navbar = ({ toggle, english, toggleSwitch }) => {
   const [scrollNav, setScrollNav] = useState(false)
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -26,9 +26,6 @@ const Navbar = ({ toggle, english, setEnglish }) => {
     scroll.scrollToTop();
   }
 
-  const toggleSwitch = () => {
-    setEnglish(!english)
-  }
   return (
     <>
       <GlobalStyles />
@@ -56,24 +53,24 @@ const Navbar = ({ toggle, english, setEnglish }) => {
             </NavItem>
             <NavItem>
               <NavLinks
+                to="habilities"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+              >
+                {english ? 'Habilities' : 'Habilidades'}
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
                 to="technologies"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact='true'
               >
-                {english ? 'Technologies' : 'Tecnologías'}
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="about"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'
-              >
-                {english ? 'About' : 'Quien Soy'}
+                {english ? 'Technologies' : 'Tecnologias'}
               </NavLinks>
             </NavItem>
           </NavMenu>
