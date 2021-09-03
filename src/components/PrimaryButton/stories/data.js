@@ -9,7 +9,7 @@ export const heroData = {
   english: false,
   engButtonText: 'Contact',
   buttonText: 'Contacto',
-  path: '#!',
+  path: 'contact',
 }
 
 export const worksPageData = {

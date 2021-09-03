@@ -6,7 +6,8 @@ import {
 } from 'react-router-dom'
 import {
   Home,
-  homeDefaultData
+  homeDefaultData,
+  Contact
 } from './pages'
 
 
@@ -17,6 +18,9 @@ const App = () => {
         <Switch>
           <Route exact path='/'>
             <Home {...homeDefaultData} />
+          </Route>
+          <Route exact path='/contact'>
+            <Contact />
           </Route>
         </Switch>
       </Router>
