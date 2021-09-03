@@ -9,7 +9,7 @@ const Hero = ({ english, buttonData }) => {
       <GlobalStyles />
       <Container>
         <HeroBg>
-          <VideoBg autoPlay loop muted /* src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' */ type='video/mp4' />
+          <VideoBg autoPlay loop muted src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' type='video/mp4' />
         </HeroBg>
         <Grid>
           <TextArea>

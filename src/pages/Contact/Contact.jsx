@@ -15,7 +15,7 @@ const ContactPage = () => {
       <GlobalStyles />
       <Container>
         <HeroBg>
-          <VideoBg autoPlay loop muted /* src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' */ type='video/mp4' />
+          <VideoBg autoPlay loop muted src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' type='video/mp4' />
         </HeroBg>
         <Pannel>
           <H1>Contact</H1>
