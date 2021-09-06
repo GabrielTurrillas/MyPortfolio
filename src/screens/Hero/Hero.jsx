@@ -81,14 +81,6 @@ const Grid = styled.div`
   color:white;
 `
 
-const TextArea = styled.div`
-  display:flex;
-  grid-area:TextArea;
-  align-items:end;
-  justify-content:center;
-  z-index:999;
-`
-
 const H1 = styled.h1`
   font-size:1.4rem;
   text-align:center;
@@ -102,14 +94,26 @@ const H1 = styled.h1`
 
 const Magenta = styled.span`
   color: ${colors.secondary};
-`
+  `
 
 const ButtonArea = styled.div`
-  display:flex;
   grid-area:ButtonArea;
+  display:flex;
+  height:100%;
   align-items:center;
   justify-content:center;
+  background-color: blue;
+  z-index:999;
+  `
+
+
+const TextArea = styled.div`
+  grid-area:TextArea;
+  display:flex;
+  height:100%;
+  align-items:flex-end;
+  justify-content:center;
+  background-color: red;
   z-index:999;
 `
-
 
