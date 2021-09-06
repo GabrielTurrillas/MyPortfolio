@@ -102,7 +102,6 @@ const ButtonArea = styled.div`
   height:100%;
   align-items:center;
   justify-content:center;
-  background-color: blue;
   z-index:999;
   `
 
@@ -113,7 +112,6 @@ const TextArea = styled.div`
   height:100%;
   align-items:flex-end;
   justify-content:center;
-  background-color: red;
   z-index:999;
 `
 
